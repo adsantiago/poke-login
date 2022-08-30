@@ -12,7 +12,7 @@ const App = () => {
     <Header>
       <ContainerHeader>
         <Title>Pokemones</Title>
-        <button className="btn btn-success">X</button>
+        <Button className="btn btn-success" to="/">X</Button>
       </ContainerHeader>
     </Header>
     </>
