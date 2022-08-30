@@ -10,6 +10,8 @@ import Login from './Components/Login';
 import Pokemon from './Components/Pokemon';
 import { Helmet } from "react-helmet";
 import Background from './Elements/Background';
+import { AuthProvider } from './Contexts/AuthContext';
+import PrivateRoute from './Components/PrivateRoute';
 
 //const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -22,16 +24,28 @@ WebFont.load({
 const Index = () => {
   return (
     <>
-      <Router>
-        <Contenedor>
-          <Routes>
-            <Route path="/" element={<App />} />
-            <Route path="/Signin" element={<Signin />} />
-            <Route path="/Login" element={<Login />} />
-            <Route path="/Pokemon" element={<Pokemon />} />
-          </Routes>
-        </Contenedor>
-      </Router>
+    <AuthProvider>
+        <Router>
+          <Contenedor>
+            <Routes>
+              <Route path="/Signin" element={<Signin />} />
+              <Route path="/Login" element={<Login />} />
+              
+              <Route path="/Pokemon" element={
+                <PrivateRoute>
+                  <Pokemon />
+                </PrivateRoute>
+              }/>
+              <Route path="/" element={
+                <PrivateRoute>
+                  <App />
+                </PrivateRoute>
+              } />
+              
+            </Routes>
+          </Contenedor>
+        </Router>
+    </AuthProvider>
       <Background />
     </>
     
