@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet';
 import BackBtn from '../Elements/BackBtn';
-import { Header, Title } from '../Elements/Header';
+import { Header, Title, ContainerHeader } from '../Elements/Header';
 
 const Pokemon = () => {
 
@@ -10,9 +10,12 @@ const Pokemon = () => {
             <Helmet>
                 <title>Pokemones</title>
             </Helmet>
+
             <Header>
-                <Title>Pokemones</Title>
-                <BackBtn></BackBtn>
+                <ContainerHeader>
+                    <Title>Pokemones</Title>
+                    <BackBtn></BackBtn>
+                </ContainerHeader>  
             </Header>
             
         </>
