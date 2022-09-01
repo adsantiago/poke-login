@@ -43,7 +43,36 @@ body {
   padding: 0;
 }
 
+.abilities{
+  list-style: none;
+}
+
 .card item{
   display: flex;
   padding: 1rem;
+}
+
+.a, .a:link, .a:visited, .a:active{
+  text-decoration: none;
+  color: black;
+}
+
+.bug{
+  background: #aedf78;
+}
+
+.grass{
+  background: #00ca91;
+}
+
+.water{
+  background: #43ccff;
+}
+
+.fire{
+  background: #e95c4d;
+}
+
+.normal{
+  background: #a5a5a5;
 }

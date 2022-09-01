@@ -31,7 +31,7 @@ const Index = () => {
               <Route path="/Signin" element={<Signin />} />
               <Route path="/Login" element={<Login />} />
               
-              <Route path="/Pokemon" element={
+              <Route path="/Pokemon/:name" element={
                 <PrivateRoute>
                   <Pokemon />
                 </PrivateRoute>
